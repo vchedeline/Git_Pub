@@ -17,6 +17,10 @@ app.get("/drinks", (req,res) => {
   });
 });
 
+app.get("/drinks/:id", (req,res) => {
+  res.send(req.params.id);
+});
+
 app.listen(PORT, () => {
   console.log(`Have no fear! For I am listening, Port ${PORT}`);
 });
