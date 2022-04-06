@@ -18,7 +18,9 @@ app.get("/drinks", (req,res) => {
 });
 
 app.get("/drinks/:id", (req,res) => {
-  res.send(req.params.id);
+  res.render("drinks_show.ejs", {
+    myDrink: drinks[req.params.id],
+  });
 });
 
 app.listen(PORT, () => {
