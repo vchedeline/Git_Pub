@@ -9,7 +9,16 @@
 <body>
   <style>
     body {color: orangered; background-color: aquamarine;}
+    li {text-transform: capitalize;}
   </style>
   <h1>Welcome to gitPub</h1>
+  <h2>My Drinks</h2>
+  <ul>
+    <% for(let i = 0; i < allDrinks.length; i++) { %>
+      <li>
+        <a href="/fruits/<%= i %> "><%= allDrinks[i].name %> </a>
+      </li> 
+    <% } %>   
+  </ul>
 </body>
 </html>
