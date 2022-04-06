@@ -8,17 +8,17 @@
 </head>
 <body>
   <style>
-    body {color: gold; background-color: navy;}
+    body {color: orangered; background-color: aquamarine;}
     li {text-transform: capitalize;}
   </style>
-  <h1>At foo bar</h1>
-  <h2>
-    <%= myDrink.name %> 
-  </h2>
-  <img src="<%= myDrink.image %> " alt="<%= myDrink.name %> ">
-  <h3>
-    <%= myDrink.price %> 
-  </h3>
-  <a href="/drinks">Back to Drinks Menu</a>
+  <h1>Welcome to gitPub</h1>
+  <h2>My Foods</h2>
+  <ul>
+    <% for(let i = 0; i < allFoods.length; i++) { %>
+      <li>
+        <a href="/foods/<%= i %> "><%= allFoods[i].name %> </a>
+      </li> 
+    <% } %>   
+  </ul>
 </body>
 </html>
