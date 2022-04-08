@@ -20,7 +20,7 @@
     <h2>
       <%= myFood.name %> - $<%= myFood.price %> 
     </h2>
-    <img src="<%= myFood.image %> " alt="<%= myFood.name %>" class="rounded mx-auto d-block">  
+    <img src="<%= (myFood.image).replace("jpg", "png") %> " alt="<%= myFood.name %>" class="rounded mx-auto d-block">  
     <a href="/foods">Back to Food Menu</a>
   </div>
 

@@ -20,7 +20,7 @@
     <h2>
       <%= myDrink.name %> - $<%= myDrink.price %> 
     </h2>
-    <img src="<%= myDrink.image %> " alt="<%= myDrink.name %>" class="rounded mx-auto d-block">  
+    <img src="<%= (myDrink.image).replace("jpg", "png") %> " alt="<%= myDrink.name %>" class="rounded mx-auto d-block">  
     <a href="/drinks">Back to Drinks Menu</a>
   </div>
 
