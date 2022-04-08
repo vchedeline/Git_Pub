@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Git Pub</title>
+  <%- include('partials/head'); %>
 </head>
-<body>
-  <style>
-    body {color: orangered; background-color: aquamarine;}
-    li {text-transform: capitalize;}
-  </style>
-  <h1>Welcome to gitPub</h1>
-  <h2>My Foods</h2>
-  <ul>
-    <% for(let i = 0; i < allFoods.length; i++) { %>
-      <li>
-        <a href="/foods/<%= i %> "><%= allFoods[i].name %> </a>
-      </li> 
-    <% } %>   
-  </ul>
+<body class="container">
+
+<header>
+  <%- include('partials/header'); %>
+</header>
+<style>
+  li {text-transform: capitalize;}
+  h3, h4 {color: white; text-align: center; padding-bottom: 3%; padding-top: 4%;}
+  img {max-width: 20vw; max-height: 20vh; align-self: center;}
+</style>
+<main>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="jumbotron">
+        <h1>Foods Menu</h1>
+        <ul>
+          <% for(let food in allFoods) { %>
+          <li>
+          <a href="/foods/<%= food %> "><%= allFoods[food].name %> </a>
+          </li> 
+          <% } %>   
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+        <h3>Featuring</h3>
+        <h4><a href="/foods/4" class="text-muted">Garlic NaN</a></h4>
+        <img src="<%=allFoods[4].image%>" alt="<%=allFoods[4].name%>" class="shadow-lg mb-5 bg-light rounded mx-auto d-block">
+      </div>
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  <%- include('partials/footer'); %>
+</footer>
+
 </body>
 </html>
